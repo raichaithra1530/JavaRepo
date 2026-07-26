@@ -2,7 +2,6 @@ package library.repository;
 
 import java.util.List;
 import java.util.Optional;
-
 import library.model.Book;
 
 /*
@@ -13,7 +12,7 @@ import library.model.Book;
     * 
     * Lets keep the data structure in a map for faster lookups:
     * Map<String,Book> where the key is the book ID and the value is the Book object.
-    * Also, data would be instore for now 
+    * Also, data would be instore for now --dated july ,2026
 */
 public interface BookRepository {
     void saveBook(Book book);
@@ -21,6 +20,6 @@ public interface BookRepository {
     List<Book> getByTitle(String title);
     List<Book> getByAuthor(String author);
     List<Book> getByGenre(String genre);
-    void removeBook(String id);
+    void deleteBookByID(String id);
     List<Book> getAvailableBooks();
 }

@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
 import library.model.Book;
 
 public class InMemoryBookDataStore implements BookRepository {
@@ -25,7 +24,7 @@ public class InMemoryBookDataStore implements BookRepository {
     }
 
     @Override
-    public void removeBook(String id) {
+    public void deleteBookByID(String id) {
         store.remove(id);
     }
 
