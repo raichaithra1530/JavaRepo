@@ -1,7 +1,8 @@
 package library.service;
 
+import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
-
 import library.model.Book;
 import library.repository.BookRepository;
 
@@ -42,7 +43,7 @@ public class LibraryBookService {
         return bookRepository.getByGenre(genre);
     }
 
-    public List<Book> getAllAvailableBooks() {
+    public List<Book> getAllBooks() {
         return bookRepository.getAvailableBooks();
     }
     
