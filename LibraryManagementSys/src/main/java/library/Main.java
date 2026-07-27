@@ -2,12 +2,12 @@ package library;
 
 import java.util.List;
 import java.util.Scanner;
-
 import library.model.Book;
 import library.repository.InMemoryBookDataStore;
 import library.service.LibraryBookService;
 
 public class Main {
+    
       private static final LibraryBookService service = new LibraryBookService(new InMemoryBookDataStore());
       private static final Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
