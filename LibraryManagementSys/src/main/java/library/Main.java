@@ -9,6 +9,7 @@ import library.service.LibraryBookService;
 public class Main {
     
       private static final LibraryBookService service = new LibraryBookService(new InMemoryBookDataStore());
+      //Constructor Injection
       private static final Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 while (true) {
