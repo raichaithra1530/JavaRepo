@@ -37,6 +37,8 @@ public class LibraryBookService {
     }
 }
 ```
+The service does not create a repository. Someone using the service gives it one. Thats constructor injection. If we dont do this the service decides which repository to use. This achieves dependency inversion (SOLID). when the application needs something like a BookRepository the caller (here the main) decises if Postgres is to be used or may be Redis. The service has no idea what kind of repository would be used and hence this makes it loosely coupled and tommorow an infra change to use postgres or in memory or anything wouldnt matter much and would be easier to inculcate in the application.
+
 **Why the Hashmap?**
 Optimized Lookups🔎 with the keys. Duh!
 
