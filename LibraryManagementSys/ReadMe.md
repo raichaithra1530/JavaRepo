@@ -38,6 +38,24 @@ public class LibraryBookService {
 }
 ```
 The service does not create a repository. Someone using the service gives it one. Thats constructor injection. If we dont do this the service decides which repository to use. This achieves dependency inversion (SOLID). when the application needs something like a BookRepository the caller (here the main) decises if Postgres is to be used or may be Redis. The service has no idea what kind of repository would be used and hence this makes it loosely coupled and tommorow an infra change to use postgres or in memory or anything wouldnt matter much and would be easier to inculcate in the application.
+More readability when you say **BookRepository**.
+**Why not Setter Injection**
+For example:
+```java
+LibraryBookService service =
+        new LibraryBookService();
+
+service.setRepository(repository);
+```
+What's wrong? What if someone forgets to assign a repository.
+```java
+LibraryBookService service =
+        new LibraryBookService();
+
+service.borrowBook(...);
+```
+💥 NullPointerException!!!
+Constructor injection guarantees the object is created in a valid state.
 
 **Why the Hashmap?**
 Optimized Lookups🔎 with the keys. Duh!
