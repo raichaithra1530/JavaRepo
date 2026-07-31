@@ -3,6 +3,7 @@
 
 > [!NOTE]
 **How to run?**
+
 ```bash
 cd ..
 mkdir LibraryManagementSys
@@ -18,6 +19,7 @@ java -cp out library.Main
 ```
 > # **Initial Notes**
 > [!NOTE]
+
 **Why interface BookRepository**
 We are implementing interface to introduce abstraction( OOP Concept) hence seperating and leaving out the code for future enhancements. Separation of Concerns (SoC) design principle (goal) achieved 🎉
 
