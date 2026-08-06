@@ -262,3 +262,6 @@ This is different.Maximum retries is configuration.Configuration shouldn't chang
 
 **For objects, references matter. For primitive values, you're actually talking about the value itself.**
 There is no separate object whose internal state changes like with a List.int is just the value.So final int means the value never changes.
+
+**Why choose Enums?**
+Boolean fields rarely scale well. Enums model the domain more explicitly and make future changes easier.
